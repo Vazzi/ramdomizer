@@ -7,16 +7,33 @@ pick item from list etc.
 
 In the project directory, you can run:
 
-### `yarn start`
+* `yarn start`
+  * Runs the app in the development mode.
+  * Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+* `yarn test`
+  * Launches the test runner in the interactive watch mode.
+* `yarn lint`
+  * Launches the eslint runner and prettier check.
+* `yarn format`
+  * Formats the whole project by prettier.
+* `yarn build`
+  * Builds the app for production to the `build` folder.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Project files
 
-### `yarn test`
+### Files
 
-Launches the test runner in the interactive watch mode.
+* `package.json` configuration of the project
+* `yarn.lock` yarn lock file.
 
-### `yarn build`
+### Hidden files
 
-Builds the app for production to the `build` folder.
+* `.gitattributes`  end of the line and binaries definition for git
+* `.env.*` environments definition of application
+* `.eslintignore`, `.eslintrc.json` eslint configuration
+* `.prettierignore`, `.prettierrc.json` prettier configuration
 
+### Folders
+
+* `public` public files of the project
+* `src` source code of the application
