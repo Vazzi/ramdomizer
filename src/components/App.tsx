@@ -1,9 +1,10 @@
 import React from 'react';
+import styles from './App.module.scss';
 
-const App = () => {
+const App = (): JSX.Element => {
   return (
-    <div className="App">
-      <h1>Randomizer</h1>
+    <div className={styles.main}>
+      <h1 className={styles.title}>Randomizer</h1>
     </div>
   );
 };
