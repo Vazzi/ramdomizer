@@ -1,10 +1,12 @@
 import React from 'react';
-import styles from './App.module.scss';
 
-const App = (): JSX.Element => {
+import styles from './App.module.scss';
+import DashboardPage from './DashboardPage/DashboardPage';
+
+const App: React.FC = () => {
   return (
     <div className={styles.main}>
-      <h1 className={styles.title}>Randomizer</h1>
+      <DashboardPage />
     </div>
   );
 };
