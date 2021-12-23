@@ -1,4 +1,21 @@
 .container {
-  margin: 20px 40px;
+  margin: 0 auto;
+  height: 100%;
+  width: 60em;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
 }
 
+.header {
+  padding: 2em;
+}
+
+.body {
+  flex: auto;
+}
+
+.footer {
+  padding: 2em 3em;
+}
