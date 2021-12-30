@@ -6,8 +6,8 @@
   flex-wrap: wrap;
   justify-content: center;
 
-  div {
-    width: 15em;
-    height: 8em;
+  > * {
+    width: 11em;
+    height: 6em;
   }
 } 

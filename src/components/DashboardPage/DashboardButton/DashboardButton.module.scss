@@ -1,0 +1,22 @@
+.button {
+  background-image: linear-gradient(-180deg, #6DD5FA 0%, #2980B9 100%);
+  box-shadow: 2px 2px 5px gray;
+  color: #ffffff;
+  cursor: pointer;
+  font-size: 1.5em;
+  text-decoration: none;
+  box-sizing: border-box;
+  border-radius: 0.5rem;
+  border: 0;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &:hover {
+    background-image: linear-gradient(-180deg, #509dbd 0%, #2980B9 100%);
+  }
+}
