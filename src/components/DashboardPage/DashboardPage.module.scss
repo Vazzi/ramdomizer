@@ -1,0 +1,13 @@
+.container {
+  padding: 2em;
+  display: flex;
+  gap: 2em;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  div {
+    width: 15em;
+    height: 8em;
+  }
+} 
