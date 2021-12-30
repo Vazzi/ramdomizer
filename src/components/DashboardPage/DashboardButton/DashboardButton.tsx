@@ -1,4 +1,6 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+
 import styles from './DashboardButton.module.scss';
 
 interface DashboardButtonProps {
@@ -8,9 +10,9 @@ interface DashboardButtonProps {
 
 const DashboardButton: React.FC<DashboardButtonProps> = ({ title, linkTo }) => {
   return (
-    <a className={styles.button} href={linkTo}>
+    <Link className={styles.button} to={linkTo}>
       {title}
-    </a>
+    </Link>
   );
 };
 
