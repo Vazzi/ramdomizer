@@ -1,0 +1,34 @@
+import React from 'react';
+
+import styles from './BaseFunctionPage.module.scss';
+import RollButton from '../../UI/RollButton/RollButton';
+
+interface BaseFunctionPageProps {
+  title: string;
+  description: string;
+  onRoll: () => void;
+  result?: string;
+  children?: React.ReactNode;
+}
+
+const BaseFunctionPage: React.FC<BaseFunctionPageProps> = ({
+  title,
+  description,
+  onRoll,
+  result,
+  children
+}) => {
+  return (
+    <div className={styles.container}>
+      <div className={styles.header}>
+        <h2>{title}</h2>
+        <p>{description}</p>
+      </div>
+      <div>{children}</div>
+      <RollButton onClick={onRoll} />
+      {result && <div className={styles.result}>{result}</div>}
+    </div>
+  );
+};
+
+export default BaseFunctionPage;
