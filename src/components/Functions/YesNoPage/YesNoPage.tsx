@@ -1,11 +1,22 @@
 import React from 'react';
 
+import BaseFunctionPage from '../BaseFunctionPage/BaseFunctionPage';
+
 const YesNoPage: React.FC = () => {
+  const [result, setResult] = React.useState<string | undefined>();
+
+  const onRollClickHandle: () => void = () => {
+    const rand = Math.round(Math.random());
+    setResult(rand ? 'YES' : 'NO');
+  };
+
   return (
-    <>
-      <h2>YesNoPage</h2>
-      <p>Work in progress...</p>
-    </>
+    <BaseFunctionPage
+      title="Yes No"
+      description="Here you get the random YES or NO answer to your question."
+      onRoll={onRollClickHandle}
+      result={result}
+    />
   );
 };
 
