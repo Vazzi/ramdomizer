@@ -1,4 +1,4 @@
-import { Range } from "./types";
+import { Range } from "../models/types";
 
 /**
  * Get the random YES or NO string

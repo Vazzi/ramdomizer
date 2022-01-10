@@ -2,7 +2,7 @@ import React from 'react';
 
 import BaseFunctionPage from '../BaseFunctionPage/BaseFunctionPage';
 import styles from './RandomNumberPage.module.scss';
-import { Range } from '../../../utils/types';
+import { Range } from '../../../models/types';
 import { getRandNumber } from '../../../utils/randomFunctions';
 
 const RandomNumberPage: React.FC = () => {
