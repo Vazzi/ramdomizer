@@ -1,0 +1,26 @@
+@use "../../../main";
+
+.error {
+  @include main.error;
+}
+
+.form {
+  padding-bottom: 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+
+  .firstRow {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-right: 0.8em;    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1em;
+
+    label {
+      padding-right: 0.8em;
+      font-size: 1.1em;
+    }
+  }
+}
