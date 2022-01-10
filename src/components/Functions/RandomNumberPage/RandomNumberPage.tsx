@@ -20,11 +20,7 @@ const RandomNumberPage: React.FC = () => {
   };
 
   const setErrorMessage = (shouldSet: boolean) => {
-    if (shouldSet) {
-      setError('Minimum is bigger or equal to maximum!');
-    } else {
-      setError(null);
-    }
+    setError(shouldSet ? 'Minimum is bigger or equal to maximum!' : null);
   };
 
   const onRangeChangedHandler = (
@@ -47,7 +43,7 @@ const RandomNumberPage: React.FC = () => {
   return (
     <BaseFunctionPage
       title="Random Number"
-      description="Here you get the random number form the given range (including min and max)."
+      description="Here you get the random number from the given range (including min and max)."
       onRoll={onRollClickHandle}
       result={result}
       disabled={!!error}
