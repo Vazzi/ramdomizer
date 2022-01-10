@@ -1,3 +1,5 @@
+@use "./main";
+
 body {
   margin: 0;
   padding: 0;
@@ -14,4 +16,12 @@ html, #root, body {
 a {
   color: #505050;
   text-decoration: none;
+}
+
+input {
+  width: 5em;
+  font-size: 1.2em;
+  padding: 0.5em 0.2em 0.5em 0.2em;
+  text-align: center;
+  @include main.border;
 }
