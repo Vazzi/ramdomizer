@@ -1,13 +1,13 @@
 import React from 'react';
 
 import BaseFunctionPage from '../BaseFunctionPage/BaseFunctionPage';
+import { getRandYesNo } from '../../../utils/randomFunctions';
 
 const YesNoPage: React.FC = () => {
   const [result, setResult] = React.useState<string | null>(null);
 
-  const onRollClickHandle: () => void = () => {
-    const rand = Math.round(Math.random());
-    setResult(rand ? 'YES' : 'NO');
+  const onRollClickHandle = () => {
+    setResult(getRandYesNo);
   };
 
   return (
