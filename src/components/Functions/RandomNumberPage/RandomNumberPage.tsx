@@ -5,6 +5,11 @@ import styles from './RandomNumberPage.module.scss';
 import { Range } from '../../../models/types';
 import { getRandNumber } from '../../../utils/randomFunctions';
 
+enum RangeLimitType {
+  Max = 0,
+  Min
+}
+
 const RandomNumberPage: React.FC = () => {
   const [result, setResult] = React.useState<string | null>(null);
   const [range, setRange] = React.useState<Range>({ min: 0, max: 10 });
@@ -24,15 +29,15 @@ const RandomNumberPage: React.FC = () => {
 
   const onRangeChangedHandler = (
     event: React.ChangeEvent<HTMLInputElement>,
-    type: 1 | 0
+    type: RangeLimitType
   ) => {
     const newValue: number = +event.target.value;
     switch (type) {
-      case 0:
+      case RangeLimitType.Min:
         setErrorMessage(newValue >= range.max);
         setRange((oldState) => ({ min: newValue, max: oldState.max }));
         break;
-      case 1:
+      case RangeLimitType.Max:
         setErrorMessage(newValue <= range.min);
         setRange((oldState) => ({ min: oldState.min, max: newValue }));
         break;
@@ -58,7 +63,7 @@ const RandomNumberPage: React.FC = () => {
               step="1"
               min="0"
               value={range.min}
-              onChange={(e) => onRangeChangedHandler(e, 0)}
+              onChange={(e) => onRangeChangedHandler(e, RangeLimitType.Min)}
             />
           </span>
           <span>
@@ -70,7 +75,7 @@ const RandomNumberPage: React.FC = () => {
               step="1"
               min="0"
               value={range.max}
-              onChange={(e) => onRangeChangedHandler(e, 1)}
+              onChange={(e) => onRangeChangedHandler(e, RangeLimitType.Max)}
             />
           </span>
         </div>
