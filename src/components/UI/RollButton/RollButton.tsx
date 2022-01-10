@@ -4,11 +4,19 @@ import styles from './RollButton.module.scss';
 
 interface RollButtonProps {
   onClick: () => void;
+  disabled: boolean;
 }
 
-const RollButton: React.FC<RollButtonProps> = ({ onClick }) => {
+const RollButton: React.FC<RollButtonProps> = ({
+  onClick,
+  disabled = false
+}) => {
   return (
-    <button className={styles.button} onClick={() => onClick()}>
+    <button
+      className={styles.button}
+      onClick={() => onClick()}
+      disabled={disabled}
+    >
       Roll
     </button>
   );

@@ -3,7 +3,7 @@ import React from 'react';
 import BaseFunctionPage from '../BaseFunctionPage/BaseFunctionPage';
 
 const YesNoPage: React.FC = () => {
-  const [result, setResult] = React.useState<string | undefined>();
+  const [result, setResult] = React.useState<string | null>(null);
 
   const onRollClickHandle: () => void = () => {
     const rand = Math.round(Math.random());

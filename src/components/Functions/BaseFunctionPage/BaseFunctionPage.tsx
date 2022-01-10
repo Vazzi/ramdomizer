@@ -7,7 +7,8 @@ interface BaseFunctionPageProps {
   title: string;
   description: string;
   onRoll: () => void;
-  result?: string;
+  result: string | null;
+  disabled?: boolean;
   children?: React.ReactNode;
 }
 
@@ -16,6 +17,7 @@ const BaseFunctionPage: React.FC<BaseFunctionPageProps> = ({
   description,
   onRoll,
   result,
+  disabled = false,
   children
 }) => {
   return (
@@ -25,7 +27,7 @@ const BaseFunctionPage: React.FC<BaseFunctionPageProps> = ({
         <p>{description}</p>
       </div>
       <div>{children}</div>
-      <RollButton onClick={onRoll} />
+      <RollButton disabled={disabled} onClick={onRoll} />
       {result && <div className={styles.result}>{result}</div>}
     </div>
   );
