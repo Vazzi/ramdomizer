@@ -22,12 +22,14 @@ const PickFromListPage: React.FC = () => {
     setPickedItem(getRandomItem(listOfItems));
   };
 
+  const resultEl = pickedItem ? <p>{pickedItem}</p> : null;
+
   return (
     <BaseFunctionPage
       title="Pick From The List"
       description="Ramdomly pick the item from the list. "
       onRoll={handleRoll}
-      result={pickedItem}
+      result={resultEl}
     >
       <div className={styles.form}>
         <textarea rows={10} id="input-list" ref={inputRef} />

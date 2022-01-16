@@ -16,12 +16,14 @@ const YesNoPage: React.FC = () => {
     setResult(getRandYesNo);
   };
 
+  const resultEl = result ? <p>{result}</p> : null;
+
   return (
     <BaseFunctionPage
       title="Yes No"
       description="Here you get the random YES or NO answer to your question."
       onRoll={handleRoll}
-      result={result}
+      result={resultEl}
     />
   );
 };

@@ -47,12 +47,14 @@ const RandomNumberPage: React.FC = () => {
     }
   };
 
+  const resultEl = result ? <p>{result}</p> : null;
+
   return (
     <BaseFunctionPage
       title="Random Number"
       description="Here you get the random number from the given range (including min and max)."
       onRoll={handleRoll}
-      result={result}
+      result={resultEl}
       disabled={!!error}
     >
       <div className={styles.form}>

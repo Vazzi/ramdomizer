@@ -7,7 +7,7 @@ interface BaseFunctionPageProps {
   title: string;
   description: string;
   onRoll: () => void;
-  result: string | null;
+  result: React.ReactNode | null;
   disabled?: boolean;
   children?: React.ReactNode;
 }
