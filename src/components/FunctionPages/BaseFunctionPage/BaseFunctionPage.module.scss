@@ -16,9 +16,12 @@
 
 .result {
   margin-top: 0.5em;
-  padding: 1em 0;
+  padding: 1em 0.3em;
   text-align: center;
+  word-wrap: break-word;
   min-width: 60%;
+  max-width: 95%;
   font-size: 4em;
+  font-size: 4vw;
   @include main.border;
 }
