@@ -1,0 +1,17 @@
+@use "../../../main";
+
+.error {
+  @include main.error;
+}
+
+.form {
+  padding-bottom: 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+
+  label {
+    padding-bottom: 0.8em;
+  }
+
+}
