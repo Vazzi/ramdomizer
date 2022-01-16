@@ -12,6 +12,12 @@ const OrderListPage: React.FC = () => {
   const handleRoll = () => {
     const inputText: string = inputRef.current ? inputRef.current.value : '';
     const listOfItems: string[] = removeEmptyItems(inputText.split('\n'));
+
+    if (listOfItems.length === 0) {
+      setList(null);
+      return;
+    }
+
     const orderedList: string[] = setRandomOrder(listOfItems);
     setList(orderedList);
   };
