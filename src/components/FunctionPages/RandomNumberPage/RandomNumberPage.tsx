@@ -15,7 +15,7 @@ const RandomNumberPage: React.FC = () => {
   const [range, setRange] = React.useState<Range>({ min: 0, max: 10 });
   const [error, setError] = React.useState<string | null>(null);
 
-  const onRollClickHandle: () => void = () => {
+  const handleRoll: () => void = () => {
     setResult(getRandNumber(range).toString());
   };
 
@@ -23,7 +23,7 @@ const RandomNumberPage: React.FC = () => {
     setError(shouldSet ? 'Minimum is bigger or equal to maximum!' : null);
   };
 
-  const onRangeChangedHandler = (
+  const handleRangeChanged = (
     event: React.ChangeEvent<HTMLInputElement>,
     type: RangeLimitType
   ) => {
@@ -44,7 +44,7 @@ const RandomNumberPage: React.FC = () => {
     <BaseFunctionPage
       title="Random Number"
       description="Here you get the random number from the given range (including min and max)."
-      onRoll={onRollClickHandle}
+      onRoll={handleRoll}
       result={result}
       disabled={!!error}
     >
@@ -59,7 +59,7 @@ const RandomNumberPage: React.FC = () => {
               step="1"
               min="0"
               value={range.min}
-              onChange={(e) => onRangeChangedHandler(e, RangeLimitType.Min)}
+              onChange={(e) => handleRangeChanged(e, RangeLimitType.Min)}
             />
           </span>
           <span>
@@ -71,7 +71,7 @@ const RandomNumberPage: React.FC = () => {
               step="1"
               min="0"
               value={range.max}
-              onChange={(e) => onRangeChangedHandler(e, RangeLimitType.Max)}
+              onChange={(e) => handleRangeChanged(e, RangeLimitType.Max)}
             />
           </span>
         </div>
