@@ -3,6 +3,7 @@ import React from 'react';
 import BaseFunctionPage from '../BaseFunctionPage/BaseFunctionPage';
 import styles from './PickFromListPage.module.scss';
 import { getRandomItem } from '../../../utils/randomFunctions';
+import { removeEmptyItems } from '../../../utils/list';
 
 /**
  * Pick from list page
@@ -37,13 +38,3 @@ const PickFromListPage: React.FC = () => {
 };
 
 export default PickFromListPage;
-
-/**
- * Function to remove empty items from list-style-image: url(
- *
- * @param {string[]} list of items
- * @returns {string[]} list with filtered items
- */
-function removeEmptyItems(list: string[]): string[] {
-  return list.filter((item) => item.length !== 0);
-}
