@@ -3,6 +3,12 @@ import { Link } from 'react-router-dom';
 
 import styles from './Header.module.scss';
 
+/**
+ * Header
+ * Represent the header of the application
+ *
+ * @returns React component
+ */
 const Header: React.FC = () => {
   return (
     <div className={styles.container}>
