@@ -8,6 +8,12 @@ interface DashboardButtonProps {
   linkTo: string;
 }
 
+/**
+ * Dashboard button
+ * Represent the button from the list of functions in dashboard
+ *
+ * @returns React component
+ */
 const DashboardButton: React.FC<DashboardButtonProps> = ({ title, linkTo }) => {
   return (
     <Link className={styles.button} to={linkTo}>

@@ -3,6 +3,12 @@ import React from 'react';
 import BaseFunctionPage from '../BaseFunctionPage/BaseFunctionPage';
 import { getRandYesNo } from '../../../utils/randomFunctions';
 
+/**
+ * Yes No page
+ * Represent the page where user get Yes or No answers
+ *
+ * @returns React component
+ */
 const YesNoPage: React.FC = () => {
   const [result, setResult] = React.useState<string | null>(null);
 

@@ -7,6 +7,12 @@ interface RollButtonProps {
   disabled: boolean;
 }
 
+/**
+ * Roll button
+ * Represent the button that user clicks on every page to roll the random result
+ *
+ * @returns React component
+ */
 const RollButton: React.FC<RollButtonProps> = ({
   onClick,
   disabled = false

@@ -12,6 +12,12 @@ interface BaseFunctionPageProps {
   children?: React.ReactNode;
 }
 
+/**
+ * Base function page
+ * Represent the base layout for all function page comopnents
+ *
+ * @returns React component
+ */
 const BaseFunctionPage: React.FC<BaseFunctionPageProps> = ({
   title,
   description,

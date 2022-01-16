@@ -11,6 +11,12 @@ import PickFromListPage from './FunctionPages/PickFromListPage/PickFromListPage'
 import OrderListPage from './FunctionPages/OrderListPage/OrderListPage';
 import RandomNumberPage from './FunctionPages/RandomNumberPage/RandomNumberPage';
 
+/**
+ * App component
+ * Represent the main component of the application
+ *
+ * @returns React component
+ */
 const App: React.FC = () => {
   return (
     <div className={styles.container}>

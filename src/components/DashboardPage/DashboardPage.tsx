@@ -4,6 +4,12 @@ import styles from './DashboardPage.module.scss';
 
 import Routes from '../../constants/routes';
 
+/**
+ * Dashboard page
+ * Represent the component where is the list of links to all function pages
+ *
+ * @returns React component
+ */
 const DashboardPage: React.FC = () => {
   return (
     <div className={styles.container}>

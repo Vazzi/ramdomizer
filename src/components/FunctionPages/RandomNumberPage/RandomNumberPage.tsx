@@ -10,6 +10,13 @@ enum RangeLimitType {
   Min
 }
 
+/**
+ * Random number page
+ * Represent the page where user enter range and component returns random number
+ * from that range
+ *
+ * @returns React component
+ */
 const RandomNumberPage: React.FC = () => {
   const [result, setResult] = React.useState<string | null>(null);
   const [range, setRange] = React.useState<Range>({ min: 0, max: 10 });
