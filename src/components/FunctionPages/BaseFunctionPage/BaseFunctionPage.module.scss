@@ -21,7 +21,6 @@
   word-wrap: break-word;
   min-width: 60%;
   max-width: 95%;
-  font-size: 4em;
-  font-size: 4vw;
+  font-size: clamp(1em, 5vw, 2em);
   @include main.border;
 }
