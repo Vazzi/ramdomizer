@@ -31,3 +31,13 @@ export const getRandomItem = <T>(list: T[]): T => {
   const index: number = getRandNumber(range);
   return list[index];
 };
+
+/**
+ * Randomly order items in given list
+ *
+ * @param {T[]} list of items 
+ * @returns {T[]} list with new order of items
+ */
+export const setRandomOrder = <T>(list: T[]): T[] => {
+  return list.sort(() => (Math.random() > .5) ? 1: -1);
+};
