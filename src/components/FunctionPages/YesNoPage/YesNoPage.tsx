@@ -16,7 +16,7 @@ const YesNoPage: React.FC = () => {
     setResult(getRandYesNo);
   };
 
-  const resultEl = result ? <p>{result}</p> : null;
+  const resultEl = result ? <p style={{ fontSize: '4em' }}>{result}</p> : null;
 
   return (
     <BaseFunctionPage
