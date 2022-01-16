@@ -27,7 +27,7 @@ const PickFromListPage: React.FC = () => {
   return (
     <BaseFunctionPage
       title="Pick From The List"
-      description="Ramdomly pick the item from the list. "
+      description="Randomly pick the item from the list. "
       onRoll={handleRoll}
       result={resultEl}
     >
