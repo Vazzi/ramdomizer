@@ -1,0 +1,23 @@
+@use "../../../main";
+
+.error {
+  @include main.error;
+}
+
+.form {
+  padding-bottom: 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+
+  label {
+    padding-bottom: 0.8em;
+  }
+}
+
+.list {
+  text-align:left;
+  justify-self: center;
+  align-content:center;
+  justify-content: center;
+}
