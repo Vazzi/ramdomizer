@@ -6,7 +6,7 @@ import { getRandYesNo } from '../../../utils/randomFunctions';
 const YesNoPage: React.FC = () => {
   const [result, setResult] = React.useState<string | null>(null);
 
-  const onRollClickHandle = () => {
+  const handleRoll = () => {
     setResult(getRandYesNo);
   };
 
@@ -14,7 +14,7 @@ const YesNoPage: React.FC = () => {
     <BaseFunctionPage
       title="Yes No"
       description="Here you get the random YES or NO answer to your question."
-      onRoll={onRollClickHandle}
+      onRoll={handleRoll}
       result={result}
     />
   );
