@@ -6,10 +6,10 @@ import DashboardPage from './DashboardPage/DashboardPage';
 import Header from './UI/Header/Header';
 import Footer from './UI/Footer/Footer';
 import AppRoutes from '../constants/routes';
-import YesNoPage from './Functions/YesNoPage/YesNoPage';
-import PickFromListPage from './Functions/PickFromListPage/PickFromListPage';
-import OrderListPage from './Functions/OrderListPage/OrderListPage';
-import RandomNumberPage from './Functions/RandomNumberPage/RandomNumberPage';
+import YesNoPage from './FunctionPages/YesNoPage/YesNoPage';
+import PickFromListPage from './FunctionPages/PickFromListPage/PickFromListPage';
+import OrderListPage from './FunctionPages/OrderListPage/OrderListPage';
+import RandomNumberPage from './FunctionPages/RandomNumberPage/RandomNumberPage';
 
 const App: React.FC = () => {
   return (
