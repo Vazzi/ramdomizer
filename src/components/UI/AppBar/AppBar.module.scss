@@ -1,0 +1,15 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.5em;
+  justify-content: stretch;
+  border: 1px solid #e7e7e7;
+  background-color: #f3f3f3;
+  padding: 0 1em;
+
+  h3 {
+    text-transform: uppercase;
+  }
+
+}
