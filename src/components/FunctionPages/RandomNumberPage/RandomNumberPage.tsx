@@ -47,7 +47,7 @@ const RandomNumberPage: React.FC = () => {
     }
   };
 
-  const resultEl = result ? <p>{result}</p> : null;
+  const resultEl = result ? <p style={{ fontSize: '3em' }}>{result}</p> : null;
 
   return (
     <BaseFunctionPage

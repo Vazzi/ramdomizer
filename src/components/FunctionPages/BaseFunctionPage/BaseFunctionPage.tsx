@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import styles from './BaseFunctionPage.module.scss';
 import RollButton from '../../UI/RollButton/RollButton';
@@ -29,12 +30,19 @@ const BaseFunctionPage: React.FC<BaseFunctionPageProps> = ({
   return (
     <div className={styles.container}>
       <div className={styles.header}>
+        <Link to="/" className={styles.backLink}>
+          &#8249; Back
+        </Link>
         <h2>{title}</h2>
         <p>{description}</p>
       </div>
-      <div>{children}</div>
-      <RollButton disabled={disabled} onClick={onRoll} />
-      {result && <div className={styles.result}>{result}</div>}
+      <div className={styles.row}>{children}</div>
+      <div style={{ alignSelf: 'center' }}>
+        <RollButton disabled={disabled} onClick={onRoll} />
+      </div>
+      <div className={styles.row}>
+        {result && <div className={styles.result}>{result}</div>}
+      </div>
     </div>
   );
 };

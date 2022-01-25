@@ -2,16 +2,39 @@
 
 .container {
   display: flex;
-  margin: 0 auto;
   flex-direction: column;
-  align-items: center;
+  align-items: stretch;
   gap: 1em;
-  width: 100%;
+  padding: 0 1em;
 }
 
 .header {
-  text-align: center;
-  padding: 0 1em;
+  padding: 1em 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.backLink {
+  align-self: flex-start;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 10px 16px;
+  border-radius: 10%;
+
+  &:hover {
+    background-color: #ddd;
+    color: black;
+  }
+}
+
+.row {
+  @media screen and (max-width: 800px) {
+    width: 100%;
+  }
+
+  width: 60%;
+  align-self: center;
 }
 
 .result {
@@ -19,8 +42,6 @@
   padding: 1em 0.3em;
   text-align: center;
   word-wrap: break-word;
-  min-width: 60%;
-  max-width: 95%;
   font-size: clamp(1em, 5vw, 2em);
   @include main.border;
 }

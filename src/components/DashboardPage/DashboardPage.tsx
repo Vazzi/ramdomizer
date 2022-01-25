@@ -3,6 +3,7 @@ import DashboardButton from './DashboardButton/DashboardButton';
 import styles from './DashboardPage.module.scss';
 
 import Routes from '../../constants/routes';
+import Header from '../UI/Header/Header';
 
 /**
  * Dashboard page
@@ -12,11 +13,14 @@ import Routes from '../../constants/routes';
  */
 const DashboardPage: React.FC = () => {
   return (
-    <div className={styles.container}>
-      <DashboardButton title="YES / NO" linkTo={Routes.YesNo} />
-      <DashboardButton title="Random number" linkTo={Routes.RandomNumber} />
-      <DashboardButton title="Order list" linkTo={Routes.OrderList} />
-      <DashboardButton title="Pick from list" linkTo={Routes.PickFromList} />
+    <div>
+      <Header />
+      <div className={styles.container}>
+        <DashboardButton title="YES / NO" linkTo={Routes.YesNo} />
+        <DashboardButton title="Random number" linkTo={Routes.RandomNumber} />
+        <DashboardButton title="Order list" linkTo={Routes.OrderList} />
+        <DashboardButton title="Pick from list" linkTo={Routes.PickFromList} />
+      </div>
     </div>
   );
 };
