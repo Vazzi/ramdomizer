@@ -1,0 +1,48 @@
+.face {
+  display: grid;
+  grid-template-areas:
+    'tl . tr'
+    'cl c cr'
+    'bl . br';
+  width: 104px;
+  height: 104px;
+  padding: 5px;
+  background-image: linear-gradient(-180deg, #6dd5fa 0%, #2980b9 100%);
+  border-radius: 10%;
+}
+
+.dot {
+  display: block;
+  align-self: center;
+  justify-self: center;
+  width: 60%;
+  height: 60%;
+  border-radius: 50%;
+  background-color: #222;
+}
+
+.dot:nth-child(2) {
+  grid-area: br;
+}
+
+.dot:nth-child(3) {
+  grid-area: tr;
+}
+
+.dot:nth-child(4) {
+  grid-area: bl;
+}
+
+.dot:nth-child(5) {
+  grid-area: cl;
+}
+
+.dot:nth-child(6) {
+  grid-area: cr;
+}
+
+.dot:nth-child(odd):last-child {
+  grid-area: c;
+}
+
+// Inspiration from Edwin (https://dev.to/ekeijl/creating-dice-using-css-grid-j4) thanks man!
