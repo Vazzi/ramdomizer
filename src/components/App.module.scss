@@ -1,19 +1,18 @@
 .container {
   margin: 0 auto;
+  padding: 0;
   height: 100%;
-  max-width: 60em;
 
   display: flex;
   flex-direction: column;
-  justify-content: stretch;
-}
-
-.header {
-  padding: 2em;
+  align-items: stretch;
 }
 
 .body {
   flex: auto;
+  width: 100%;
+  max-width: 60em;
+  margin: 0 auto;
 }
 
 .footer {

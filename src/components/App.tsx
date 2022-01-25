@@ -3,8 +3,8 @@ import { Routes, Route } from 'react-router-dom';
 
 import styles from './App.module.scss';
 import DashboardPage from './DashboardPage/DashboardPage';
-import Header from './UI/Header/Header';
 import Footer from './UI/Footer/Footer';
+import AppBar from './UI/AppBar/AppBar';
 import AppRoutes from '../constants/routes';
 import YesNoPage from './FunctionPages/YesNoPage/YesNoPage';
 import PickFromListPage from './FunctionPages/PickFromListPage/PickFromListPage';
@@ -21,7 +21,7 @@ const App: React.FC = () => {
   return (
     <div className={styles.container}>
       <header className={styles.header}>
-        <Header />
+        <AppBar />
       </header>
       <section className={styles.body}>
         <Routes>
