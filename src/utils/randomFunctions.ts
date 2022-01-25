@@ -1,4 +1,4 @@
-import { Range } from '../models/types';
+import { DiceValue, Range } from '../models/types';
 
 /**
  * Get the random YES or NO string
@@ -21,6 +21,15 @@ export const getRandNumber = (range: Range): number => {
 };
 
 /**
+ * Get the random dice roll
+ *
+ * @returns {DiceValue} random number from 1 to 6
+ */
+export const getRandDiceRoll = (): DiceValue => {
+  return getRandNumber({ min: 1, max: 6 }) as DiceValue;
+};
+
+/**
  * Get the random item from given list
  *
  * @param {T[]} list of items to pick from
@@ -35,9 +44,9 @@ export const getRandomItem = <T>(list: T[]): T => {
 /**
  * Randomly order items in given list
  *
- * @param {T[]} list of items 
+ * @param {T[]} list of items
  * @returns {T[]} list with new order of items
  */
 export const setRandomOrder = <T>(list: T[]): T[] => {
-  return list.sort(() => (Math.random() > .5) ? 1: -1);
+  return list.sort(() => (Math.random() > 0.5 ? 1 : -1));
 };
