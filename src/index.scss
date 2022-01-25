@@ -34,6 +34,14 @@ textarea {
   @include main.border;
 }
 
+select {
+  width: 5em;
+  font-size: 1.2em;
+  padding: 0.5em 0.2em 0.5em 0.2em;
+  text-align: center;
+  @include main.border;
+}
+
 h1 {
   font-size: 3em;
   text-transform: uppercase;

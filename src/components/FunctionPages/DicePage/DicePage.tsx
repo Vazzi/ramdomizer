@@ -27,14 +27,11 @@ const DicePage: React.FC = () => {
   };
 
   const handleDiceCountChange = (
-    event: React.ChangeEvent<HTMLInputElement>
+    event: React.ChangeEvent<HTMLSelectElement>
   ) => {
     const value = +event.target.value;
-    if (typeof value !== 'number' || value < 1 || value > MAX_DICES) {
-      setDiceCount(1);
-    } else {
-      setDiceCount(value);
-    }
+
+    setDiceCount(value);
     setResults(null);
   };
 
@@ -55,14 +52,20 @@ const DicePage: React.FC = () => {
     >
       <div className={styles.container}>
         <label>Number of dice:</label>
-        <input
-          type="number"
-          id="input-dice-count"
-          step="1"
-          min="0"
+        <select
           value={diceCount}
+          name="number-of-dice"
+          id="select-number-of-dice"
           onChange={handleDiceCountChange}
-        />
+        >
+          {Array(MAX_DICES)
+            .fill(0)
+            .map((_, i) => (
+              <option key={i} value={`${i + 1}`}>
+                {i + 1}
+              </option>
+            ))}
+        </select>
       </div>
     </BaseFunctionPage>
   );
