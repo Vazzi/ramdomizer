@@ -20,6 +20,7 @@ const DashboardPage: React.FC = () => {
         <DashboardButton title="Random number" linkTo={Routes.RandomNumber} />
         <DashboardButton title="Order list" linkTo={Routes.OrderList} />
         <DashboardButton title="Pick from list" linkTo={Routes.PickFromList} />
+        <DashboardButton title="Roll the dice" linkTo={Routes.Dice} />
       </div>
     </div>
   );

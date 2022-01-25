@@ -10,6 +10,7 @@ import YesNoPage from './FunctionPages/YesNoPage/YesNoPage';
 import PickFromListPage from './FunctionPages/PickFromListPage/PickFromListPage';
 import OrderListPage from './FunctionPages/OrderListPage/OrderListPage';
 import RandomNumberPage from './FunctionPages/RandomNumberPage/RandomNumberPage';
+import DicePage from './FunctionPages/DicePage/DicePage';
 
 /**
  * App component
@@ -29,6 +30,7 @@ const App: React.FC = () => {
           <Route path={AppRoutes.RandomNumber} element={<RandomNumberPage />} />
           <Route path={AppRoutes.OrderList} element={<OrderListPage />} />
           <Route path={AppRoutes.PickFromList} element={<PickFromListPage />} />
+          <Route path={AppRoutes.Dice} element={<DicePage />} />
           <Route path="*" element={<DashboardPage />} />
         </Routes>
       </section>
