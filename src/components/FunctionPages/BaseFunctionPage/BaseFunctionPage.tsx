@@ -1,4 +1,6 @@
 import React from 'react';
+import { useIntl } from 'react-intl';
+import messages from './messages';
 import { Link } from 'react-router-dom';
 
 import styles from './BaseFunctionPage.module.scss';
@@ -27,11 +29,13 @@ const BaseFunctionPage: React.FC<BaseFunctionPageProps> = ({
   disabled = false,
   children
 }) => {
+  const { formatMessage } = useIntl();
+
   return (
     <div className={styles.container}>
       <div className={styles.header}>
         <Link to="/" className={styles.backLink}>
-          &#8249; Back
+          &#8249; {formatMessage({ ...messages.backButtonTitle })}
         </Link>
         <h2>{title}</h2>
         <p>{description}</p>

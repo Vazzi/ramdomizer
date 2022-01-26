@@ -1,4 +1,6 @@
 import React from 'react';
+import { useIntl } from 'react-intl';
+import messages from './messages';
 
 import BaseFunctionPage from '../BaseFunctionPage/BaseFunctionPage';
 import styles from './RandomNumberPage.module.scss';
@@ -18,6 +20,7 @@ enum RangeLimitType {
  * @returns React component
  */
 const RandomNumberPage: React.FC = () => {
+  const { formatMessage } = useIntl();
   const [result, setResult] = React.useState<string | null>(null);
   const [range, setRange] = React.useState<Range>({ min: 0, max: 10 });
   const [error, setError] = React.useState<string | null>(null);
@@ -27,7 +30,7 @@ const RandomNumberPage: React.FC = () => {
   };
 
   const setErrorMessage = (shouldSet: boolean) => {
-    setError(shouldSet ? 'Minimum is bigger or equal to maximum!' : null);
+    setError(shouldSet ? formatMessage({ ...messages.errorMinMax }) : null);
   };
 
   const handleRangeChanged = (
@@ -51,8 +54,8 @@ const RandomNumberPage: React.FC = () => {
 
   return (
     <BaseFunctionPage
-      title="Random Number"
-      description="Here you get the random number from the given range (including min and max)."
+      title={formatMessage({ ...messages.title })}
+      description={formatMessage({ ...messages.description })}
       onRoll={handleRoll}
       result={resultEl}
       disabled={!!error}
@@ -60,7 +63,7 @@ const RandomNumberPage: React.FC = () => {
       <div className={styles.form}>
         <div className={styles.firstRow}>
           <span>
-            <label>From:</label>
+            <label>{formatMessage({ ...messages.fromLabel })}</label>
             <input
               type="number"
               id="input-minimum"
@@ -72,7 +75,7 @@ const RandomNumberPage: React.FC = () => {
             />
           </span>
           <span>
-            <label>To:</label>
+            <label>{formatMessage({ ...messages.toLabel })}</label>
             <input
               type="number"
               id="input-maximum"

@@ -1,4 +1,6 @@
 import React from 'react';
+import { useIntl } from 'react-intl';
+import messages from './messages';
 
 import BaseFunctionPage from '../BaseFunctionPage/BaseFunctionPage';
 import { getRandYesNo } from '../../../utils/randomFunctions';
@@ -10,6 +12,7 @@ import { getRandYesNo } from '../../../utils/randomFunctions';
  * @returns React component
  */
 const YesNoPage: React.FC = () => {
+  const { formatMessage } = useIntl();
   const [result, setResult] = React.useState<string | null>(null);
 
   const handleRoll = () => {
@@ -20,8 +23,8 @@ const YesNoPage: React.FC = () => {
 
   return (
     <BaseFunctionPage
-      title="Yes No"
-      description="Here you get the random YES or NO answer to your question."
+      title={formatMessage({ ...messages.title })}
+      description={formatMessage({ ...messages.description })}
       onRoll={handleRoll}
       result={resultEl}
     />

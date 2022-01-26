@@ -1,4 +1,6 @@
 import React from 'react';
+import { useIntl } from 'react-intl';
+import messages from './messages';
 
 import BaseFunctionPage from '../BaseFunctionPage/BaseFunctionPage';
 import styles from './OrderListPage.module.scss';
@@ -6,6 +8,7 @@ import { removeEmptyItems } from '../../../utils/list';
 import { setRandomOrder } from '../../../utils/randomFunctions';
 
 const OrderListPage: React.FC = () => {
+  const { formatMessage } = useIntl();
   const [list, setList] = React.useState<string[] | null>(null);
   const inputRef = React.useRef<HTMLTextAreaElement>(null);
 
@@ -32,14 +35,14 @@ const OrderListPage: React.FC = () => {
 
   return (
     <BaseFunctionPage
-      title="Randomly order list"
-      description="Randomly order the given list of items. "
+      title={formatMessage({ ...messages.title })}
+      description={formatMessage({ ...messages.description })}
       onRoll={handleRoll}
       result={resultEl}
     >
       <div className={styles.form}>
         <textarea rows={10} id="input-list" ref={inputRef} />
-        <label>Insert your list. Each item on one line.</label>
+        <label>{formatMessage({ ...messages.textareaHelper })}</label>
       </div>
     </BaseFunctionPage>
   );

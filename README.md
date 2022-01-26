@@ -18,6 +18,8 @@ In the project directory, you can run:
   * Formats the whole project by prettier.
 * `yarn build`
   * Builds the app for production to the `build` folder.
+* `yarn genLang`
+  * Generate localization file in `src/lang/en.json`
 
 ## Project files
 

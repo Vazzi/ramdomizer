@@ -1,6 +1,8 @@
 import React from 'react';
+import { useIntl } from 'react-intl';
 
 import styles from './RollButton.module.scss';
+import messages from './messages';
 
 interface RollButtonProps {
   onClick: () => void;
@@ -17,13 +19,15 @@ const RollButton: React.FC<RollButtonProps> = ({
   onClick,
   disabled = false
 }) => {
+  const { formatMessage } = useIntl();
+
   return (
     <button
       className={styles.button}
       onClick={() => onClick()}
       disabled={disabled}
     >
-      Roll
+      {formatMessage({ ...messages.title })}
     </button>
   );
 };

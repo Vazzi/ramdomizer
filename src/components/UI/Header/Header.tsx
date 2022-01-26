@@ -1,6 +1,8 @@
 import React from 'react';
+import { useIntl } from 'react-intl';
 
 import styles from './Header.module.scss';
+import messages from './messages';
 
 /**
  * Header
@@ -9,10 +11,12 @@ import styles from './Header.module.scss';
  * @returns React component
  */
 const Header: React.FC = () => {
+  const { formatMessage } = useIntl();
+
   return (
     <div className={styles.container}>
       <h1>Randomizer</h1>
-      <p>Here you can find and use functions to randomize anything.</p>
+      <p>{formatMessage({ ...messages.description })}</p>
     </div>
   );
 };

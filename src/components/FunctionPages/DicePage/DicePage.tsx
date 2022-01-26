@@ -1,4 +1,6 @@
 import React from 'react';
+import { useIntl } from 'react-intl';
+import messages from './messages';
 
 import BaseFunctionPage from '../BaseFunctionPage/BaseFunctionPage';
 import { getRandDiceRoll } from '../../../utils/randomFunctions';
@@ -15,6 +17,7 @@ const MAX_DICES = 8;
  * @returns React component
  */
 const DicePage: React.FC = () => {
+  const { formatMessage } = useIntl();
   const [results, setResults] = React.useState<DiceValue[] | null>(null);
   const [diceCount, setDiceCount] = React.useState<number>(1);
 
@@ -45,13 +48,13 @@ const DicePage: React.FC = () => {
 
   return (
     <BaseFunctionPage
-      title="Roll of the dice"
-      description="Here you get the random roll of the dice."
+      title={formatMessage({ ...messages.title })}
+      description={formatMessage({ ...messages.description })}
       onRoll={handleRoll}
       result={resultEl}
     >
       <div className={styles.container}>
-        <label>Number of dice:</label>
+        <label>{formatMessage({ ...messages.diceCountLabel })}</label>
         <select
           value={diceCount}
           name="number-of-dice"
